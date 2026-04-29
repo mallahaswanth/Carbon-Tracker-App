@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Carbon Credits Tracker Application</title>
+</head>
+<body>
+    <div class="card">
+        <h2>Select User</h2>
+        <label class="user-option">
+            <input type="radio" name="user" value="Alex" checked> Alex
+        </label>
+        <label class="user-option">
+            <input type="radio" name="user" value="Diana" checked> Diana
+        </label>
+        <button onclick="login()">Enter Dashboard</button>
+    </div>
+    <script>
+        function login() {
+            const selectedUser = document.querySelector('input[name="user"]:checked').value;
+            sessionStorage.setItem('currentUser', selectedUser);
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
